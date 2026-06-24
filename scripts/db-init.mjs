@@ -1,7 +1,16 @@
 #!/usr/bin/env zx
 
 import 'zx/globals'
+import { useBash, usePowerShell, usePwsh } from 'zx'
 import { dbExecute, declareLocalType, exitWithDbClose, loadEnv, testDbConnect } from './utils.mjs'
+
+// ========== 新增：根据操作系统选择合适的 shell ==========
+if (os.platform() === 'win32') {
+  usePwsh()
+  // usePowerShell()
+} else {
+  useBash()
+}
 
 // 根据环境变量 process.env.DB_DRIVER 声明 type DB_DRIVER
 
@@ -60,7 +69,7 @@ try {
   echo(
     chalk.yellow(
       '\n数据库初始化失败，请重试。\n\n可前往: https://github.com/Y80/bmm/issues?q=数据库 查看相关问题。\n' +
-      '或带上报错信息新建 issue，我会尽快处理 :) \n'
+        '或带上报错信息新建 issue，我会尽快处理 :) \n'
     )
   )
   exitWithDbClose(1)
