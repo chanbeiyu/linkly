@@ -1,10 +1,10 @@
-# BMM Agent Docs
+# Linkly Agent Docs
 
-本 skill 说明 BMM 项目的智能体文档架构，确保所有 AI 智能体（Claude Code、Codex 等）共享同一份项目指南。
+本 skill 说明 Linkly 项目的智能体文档架构，确保所有 AI 智能体（Claude Code、Codex 等）共享同一份项目指南。
 
 ## 文档结构
 
-BMM 使用 **单一来源** 策略，所有智能体读取同一份文档：
+Linkly 使用 **单一来源** 策略，所有智能体读取同一份文档：
 
 ```
 项目根目录/

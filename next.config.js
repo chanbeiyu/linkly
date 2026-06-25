@@ -25,7 +25,8 @@ export default async function setup(phase) {
           hostname: '*.iconify.design',
           pathname: '**',
         },
-        process.env.NEXT_PUBLIC_WEBSITE_LOGO ? new URL(process.env.NEXT_PUBLIC_WEBSITE_LOGO) : undefined,
+        // |===> 这地方写 logo 是错误的
+        // process.env.NEXT_PUBLIC_WEBSITE_LOGO ? new URL(process.env.NEXT_PUBLIC_WEBSITE_LOGO) : undefined,
       ].filter(Boolean),
       dangerouslyAllowSVG: true,
     },

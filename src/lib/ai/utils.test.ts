@@ -10,17 +10,17 @@ const schema = z.object({
 
 describe('parseAiJsonObject', () => {
   test('解析纯 JSON 对象', () => {
-    expect(parseAiJsonObject('{"title":"BMM","tags":["AI"]}', schema)).toEqual({
-      title: 'BMM',
+    expect(parseAiJsonObject('{"title":"Linkly","tags":["AI"]}', schema)).toEqual({
+      title: 'Linkly',
       tags: ['AI'],
     })
   })
 
   test('解析被 Markdown 代码块包裹的 JSON 对象', () => {
     expect(
-      parseAiJsonObject('```json\n{"title":"BMM","tags":["Bookmark"]}\n```', schema)
+      parseAiJsonObject('```json\n{"title":"Linkly","tags":["Bookmark"]}\n```', schema)
     ).toEqual({
-      title: 'BMM',
+      title: 'Linkly',
       tags: ['Bookmark'],
     })
   })
@@ -32,7 +32,7 @@ describe('parseAiJsonObject', () => {
   })
 
   test('JSON 数据结构不符合预期时抛出可读错误', () => {
-    expect(() => parseAiJsonObject('{"title":"BMM","tags":"AI"}', schema)).toThrowError(
+    expect(() => parseAiJsonObject('{"title":"Linkly","tags":"AI"}', schema)).toThrowError(
       'AI 响应 JSON 数据结构不符合预期'
     )
   })

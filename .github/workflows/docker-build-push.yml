@@ -11,7 +11,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/bmm
+  IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/linkly
 
 jobs:
   build-and-push:

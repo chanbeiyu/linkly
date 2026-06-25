@@ -25,7 +25,7 @@ describe('configs', async () => {
 
   test('网站配置支持 JSON 值并限制 key 唯一', async () => {
     const value: ConfigValue = {
-      title: 'BMM',
+      title: 'Linkly',
       features: ['bookmarks', 'tags'],
       limits: { upload: 10 },
       enabled: true,

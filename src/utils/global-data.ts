@@ -13,7 +13,7 @@ interface InitGlobalDataParams<T> {
 
 export function initGlobalData<T>(params: InitGlobalDataParams<T>) {
   const g = global as any
-  const key = '__bmm_' + params.key
+  const key = '__linkly_' + params.key
   if (!g[key]) {
     g[key] = params.initialData()
   }
