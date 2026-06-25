@@ -43,4 +43,5 @@ local.d.ts
 # database
 src/db/*/migrations
 sqlite.db
+sqlite.db-*
 
