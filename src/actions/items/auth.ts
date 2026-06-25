@@ -5,7 +5,8 @@ import { robustUrl } from '@/utils'
 import { makeActionInput } from '../make-action'
 
 export async function checkGithubOAuthConfig() {
-  return !!(process.env.AUTH_GITHUB_ID && process.env.AUTH_GITHUB_SECRET)
+  // |===> 检查 GitHub 登录是否已启用 且是否禁止新用户注册
+  return !!(process.env.AUTH_GITHUB_ID && process.env.AUTH_GITHUB_SECRET && !process.env.NEXT_REGISTER_DISABLED)
 }
 
 const deleteUserSchema = z.object({
