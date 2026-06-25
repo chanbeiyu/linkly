@@ -68,7 +68,7 @@ try {
   console.log('========================================================================')
   echo(
     chalk.yellow(
-      '\n数据库初始化失败，请重试。\n\n可前往: https://github.com/Y80/bmm/issues?q=数据库 查看相关问题。\n' +
+      '\n数据库初始化失败，请重试。\n\n可前往: https://github.com/chanbeiyu/linkly/issues?q=数据库 查看相关问题。\n' +
         '或带上报错信息新建 issue，我会尽快处理 :) \n'
     )
   )

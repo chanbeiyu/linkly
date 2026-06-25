@@ -3,7 +3,7 @@ import { getBookmarkHost } from './bookmark-host'
 
 describe('getBookmarkHost', () => {
   it('should extract origin from a full URL', () => {
-    expect(getBookmarkHost('https://example.com/articles/1?from=bmm#title')).toMatchObject({
+    expect(getBookmarkHost('https://example.com/articles/1?from=linkly#title')).toMatchObject({
       protocol: 'https:',
       hostname: 'example.com',
       port: '',

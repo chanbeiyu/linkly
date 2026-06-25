@@ -32,7 +32,7 @@ import { useState } from 'react'
 
 const PAGE_SIZE_OPTIONS = [10, 20, 50, 100] as const
 const DEFAULT_PAGE_SIZE = 20
-const PAGE_SIZE_CACHE_PREFIX = 'bmm:page-size:'
+const PAGE_SIZE_CACHE_PREFIX = 'linkly:page-size:'
 
 function getPageSizeCacheKey(pathname: string) {
   return `${PAGE_SIZE_CACHE_PREFIX}${pathname}`

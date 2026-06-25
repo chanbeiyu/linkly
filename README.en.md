@@ -1,11 +1,11 @@
 <div align="center">
-  <img width="108" src="./doc/images/logo.svg" alt="BMM Logo">
-  <h1>BMM</h1>
+  <img width="108" src="./doc/images/logo.svg" alt="Linkly Logo">
+  <h1>Linkly</h1>
   <p>An open-source full-stack app for collecting, organizing, searching, and sharing website bookmarks.</p>
   <p>Built for personal and team use, with a public showcase, user workspace, admin tools, and AI-assisted bookmark workflows.</p>
   <p>
-    <a href="https://bmm.lccl.cc/" target="_blank">Live Demo</a> ·
-    <a href="https://github.com/Y80/bmm" target="_blank">GitHub</a> ·
+    <a href="https://linkly.ensoul.club/" target="_blank">Live Demo</a> ·
+    <a href="https://github.com/chanbeiyu/linkly" target="_blank">GitHub</a> ·
     <a href="#quick-start">Quick Start</a>
   </p>
   <p>
@@ -34,7 +34,7 @@
 
 ## Overview
 
-BMM is an open-source application for managing website bookmarks. It combines collecting links, organizing them with tags, publishing curated websites, and maintaining the data from an admin interface in one system, with automatic metadata fetching and AI-assisted entry flows.
+Linkly is an open-source application for managing website bookmarks. It combines collecting links, organizing them with tags, publishing curated websites, and maintaining the data from an admin interface in one system, with automatic metadata fetching and AI-assisted entry flows.
 
 You can use it as:
 
@@ -94,8 +94,8 @@ You can use it as:
 ### Local Development
 
 ```bash
-git clone https://github.com/Y80/bmm.git
-cd bmm
+git clone https://github.com/chanbeiyu/linkly.git
+cd linkly
 pnpm install
 pnpm dev
 ```
@@ -141,7 +141,7 @@ See [`.env`](./.env) for the full example.
 
 ## Database
 
-BMM currently supports SQLite, PostgreSQL, and Turso directly.
+Linkly currently supports SQLite, PostgreSQL, and Turso directly.
 
 - SQLite is the default local option, and the database file is initialized automatically on first run.
 - To switch to PostgreSQL or Turso, update `DB_DRIVER` and `DB_CONNECTION_URL`.
@@ -161,8 +161,8 @@ pnpm db:migrate
 ### Node Deployment
 
 ```bash
-git clone https://github.com/Y80/bmm.git
-cd bmm
+git clone https://github.com/chanbeiyu/linkly.git
+cd linkly
 pnpm install
 pnpm build
 pnpm start
@@ -173,14 +173,14 @@ pnpm start
 The repository includes a ready-to-use [`Dockerfile`](./Dockerfile). The example below uses SQLite with a mounted volume:
 
 ```bash
-docker build -t bmm .
+docker build -t linkly .
 
 docker run --rm \
   -e DB_DRIVER=sqlite \
   -e DB_CONNECTION_URL=file:/app/volume/sqlite.db \
-  -v bmm:/app/volume \
+  -v linkly:/app/volume \
   -p 3000:3000 \
-  bmm
+  linkly
 ```
 
 ### Vercel Deployment
@@ -208,7 +208,7 @@ Supported options include OpenAI-compatible providers such as OpenAI, DeepSeek, 
 ## GitHub OAuth Setup
 
 > [!IMPORTANT]
-> `AUTH_URL`, the GitHub OAuth App `Authorization callback URL`, and the actual URL users use to access BMM must match exactly.
+> `AUTH_URL`, the GitHub OAuth App `Authorization callback URL`, and the actual URL users use to access Linkly must match exactly.
 
 1. Create a GitHub OAuth App at <https://github.com/settings/applications/new>.
 2. Set the callback URL in the form `https://your-domain.com/api/auth/callback/github`.
@@ -235,10 +235,10 @@ These screenshots can help when checking the configuration:
 
 <br>
 
-It should equal the real URL users open BMM with, for example:
+It should equal the real URL users open Linkly with, for example:
 
 - `http://localhost:3000`
-- `https://bmm.vercel.app`
+- `https://linkly.vercel.app`
 - `https://example.com`
 - `http://10.1.2.3:3000`
 
@@ -253,7 +253,7 @@ Check whether these three values are exactly the same:
 
 - the GitHub OAuth App `Authorization callback URL`
 - the `AUTH_URL` environment variable
-- the actual BMM access URL
+- the actual Linkly access URL
 
 Example error screenshot:
 

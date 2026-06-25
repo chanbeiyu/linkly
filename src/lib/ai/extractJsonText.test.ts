@@ -3,7 +3,7 @@ import { extractAiJsonText } from './extractJsonText'
 
 describe('extractAiJsonText', () => {
   test('keeps plain json object unchanged', () => {
-    expect(extractAiJsonText('{"title":"BMM"}')).toBe('{"title":"BMM"}')
+    expect(extractAiJsonText('{"title":"Linkly"}')).toBe('{"title":"Linkly"}')
   })
 
   test('extracts final json object after think reasoning', () => {
@@ -22,9 +22,9 @@ describe('extractAiJsonText', () => {
     expect(
       extractAiJsonText(`
 \`\`\`json
-{"title":"BMM"}
+{"title":"Linkly"}
 \`\`\`
 `)
-    ).toBe('{"title":"BMM"}')
+    ).toBe('{"title":"Linkly"}')
   })
 })

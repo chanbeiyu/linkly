@@ -32,7 +32,7 @@ describe('generateAiObject', () => {
   test('uses structured output and returns parsed object', async () => {
     vi.mocked(generateText).mockResolvedValue({
       output: {
-        title: 'BMM',
+        title: 'Linkly',
         count: 2,
       },
     } as never)
@@ -45,7 +45,7 @@ describe('generateAiObject', () => {
         prompt: 'user prompt',
       })
     ).resolves.toEqual({
-      title: 'BMM',
+      title: 'Linkly',
       count: 2,
     })
 
@@ -66,7 +66,7 @@ describe('generateAiObject', () => {
   test('throws schema validation error when output shape is invalid', async () => {
     vi.mocked(generateText).mockResolvedValue({
       output: {
-        title: 'BMM',
+        title: 'Linkly',
         count: '2',
       },
     } as never)

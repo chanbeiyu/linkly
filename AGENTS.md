@@ -2,7 +2,7 @@
 
 ## 项目概览
 
-BMM（Bookmark Manager）是一个基于 Next.js 16 的全栈 TypeScript 应用，支持用户管理、分享和浏览书签，并集成 AI 功能（网站分析、标签推荐等）。
+Linkly（Bookmark Manager）是一个基于 Next.js 16 的全栈 TypeScript 应用，支持用户管理、分享和浏览书签，并集成 AI 功能（网站分析、标签推荐等）。
 
 ## 核心原则
 

@@ -1,9 +1,9 @@
 ---
-name: bmm-bookmark-form
-description: Guide for modifying BMM bookmark create/edit pages and related icon workflows. Use when Codex needs to change the bookmark form UI, favicon input behavior, website icon probing, HTML/AI autofill actions, or nearby validation and feedback logic in this repository.
+name: linkly-bookmark-form
+description: Guide for modifying Linkly bookmark create/edit pages and related icon workflows. Use when Codex needs to change the bookmark form UI, favicon input behavior, website icon probing, HTML/AI autofill actions, or nearby validation and feedback logic in this repository.
 ---
 
-# BMM Bookmark Form
+# Linkly Bookmark Form
 
 Update the bookmark create/edit flow from the form entry point first, then follow the data path only as far as the requested change requires.
 
@@ -50,6 +50,6 @@ Update the bookmark create/edit flow from the form entry point first, then follo
 
 ## Example Requests
 
-- "Use $bmm-bookmark-form to add a new control to the bookmark edit page."
-- "Use $bmm-bookmark-form to change how favicon probing behaves in the bookmark form."
-- "Use $bmm-bookmark-form to update the icon dropdown feedback and validation copy."
+- "Use $linkly-bookmark-form to add a new control to the bookmark edit page."
+- "Use $linkly-bookmark-form to change how favicon probing behaves in the bookmark form."
+- "Use $linkly-bookmark-form to update the icon dropdown feedback and validation copy."

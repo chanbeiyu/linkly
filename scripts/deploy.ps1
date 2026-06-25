@@ -1,6 +1,6 @@
 # 编码设置
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
-$pm2_process_name = "bmm"
+$pm2_process_name = "linkly"
 
 # 获取脚本所在目录
 $workdir = $PSScriptRoot

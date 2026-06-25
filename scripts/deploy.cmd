@@ -2,7 +2,7 @@
 chcp 65001 >nul
 setlocal enabledelayedexpansion
 
-set "pm2_process_name=bmm"
+set "pm2_process_name=linkly"
 :: 获取脚本所在目录
 set "workdir=%~dp0"
 cd /d "%workdir%"

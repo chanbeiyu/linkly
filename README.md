@@ -1,11 +1,11 @@
 <div align="center">
-  <img width="108" src="./doc/images/logo.svg" alt="BMM Logo">
-  <h1>BMM</h1>
+  <img width="108" src="./doc/images/logo.svg" alt="Linkly Logo">
+  <h1>Linkly</h1>
   <p>收纳、整理、搜索与分享网站书签的开源全栈应用。</p>
   <p>面向个人与团队的书签管理器，支持公开展示、用户空间、后台维护，以及 AI 辅助整理流程。</p>
   <p>
-    <a href="https://bmm.lccl.cc/" target="_blank">在线体验</a> ·
-    <a href="https://github.com/Y80/bmm" target="_blank">GitHub</a> ·
+    <a href="https://linkly.ensoul.club/" target="_blank">在线体验</a> ·
+    <a href="https://github.com/chanbeiyu/linkly" target="_blank">GitHub</a> ·
     <a href="#quick-start">快速开始</a>
   </p>
   <p>
@@ -34,7 +34,7 @@
 
 ## 概览
 
-BMM 是一个用于管理网站书签的开源应用。它把“收藏网页”“按标签整理”“公开展示优质网站”“在后台持续维护数据”放到同一套系统里，并为书签录入提供自动抓取与 AI 辅助能力。
+Linkly 是一个用于管理网站书签的开源应用。它把“收藏网页”“按标签整理”“公开展示优质网站”“在后台持续维护数据”放到同一套系统里，并为书签录入提供自动抓取与 AI 辅助能力。
 
 你可以把它当作：
 
@@ -94,8 +94,8 @@ BMM 是一个用于管理网站书签的开源应用。它把“收藏网页”�
 ### 本地开发
 
 ```bash
-git clone https://github.com/Y80/bmm.git
-cd bmm
+git clone https://github.com/chanbeiyu/linkly.git
+cd linkly
 pnpm install
 pnpm dev
 ```
@@ -141,7 +141,7 @@ pnpm dev
 
 ## 数据库
 
-BMM 目前直接支持 SQLite、PostgreSQL 与 Turso。
+Linkly 目前直接支持 SQLite、PostgreSQL 与 Turso。
 
 - 本地默认方案是 SQLite，数据库文件会在首次运行时自动初始化。
 - 切换到 PostgreSQL 或 Turso 时，只需要调整 `DB_DRIVER` 与 `DB_CONNECTION_URL`。
@@ -161,8 +161,8 @@ pnpm db:migrate
 ### Node 部署
 
 ```bash
-git clone https://github.com/Y80/bmm.git
-cd bmm
+git clone https://github.com/chanbeiyu/linkly.git
+cd linkly
 pnpm install
 pnpm build
 pnpm start
@@ -173,14 +173,14 @@ pnpm start
 项目自带 [`Dockerfile`](./Dockerfile)。下面示例使用 SQLite 挂载数据卷：
 
 ```bash
-docker build -t bmm .
+docker build -t linkly .
 
 docker run --rm \
   -e DB_DRIVER=sqlite \
   -e DB_CONNECTION_URL=file:/app/volume/sqlite.db \
-  -v bmm:/app/volume \
+  -v linkly:/app/volume \
   -p 3000:3000 \
-  bmm
+  linkly
 ```
 
 ### Vercel 部署
@@ -208,7 +208,7 @@ AI 能力用于减少书签录入与整理的手工操作，当前主要覆盖�
 ## GitHub OAuth 配置
 
 > [!IMPORTANT]
-> `AUTH_URL`、GitHub OAuth App 的 `Authorization callback URL`、以及用户实际访问 BMM 的地址必须保持一致。
+> `AUTH_URL`、GitHub OAuth App 的 `Authorization callback URL`、以及用户实际访问 Linkly 的地址必须保持一致。
 
 1. 访问 <https://github.com/settings/applications/new> 创建 GitHub OAuth App。
 2. 将回调地址设置为 `https://your-domain.com/api/auth/callback/github` 形式。
@@ -235,10 +235,10 @@ AUTH_URL=https://your-domain.com
 
 <br>
 
-它应该等于用户访问 BMM 的实际地址，例如：
+它应该等于用户访问 Linkly 的实际地址，例如：
 
 - `http://localhost:3000`
-- `https://bmm.vercel.app`
+- `https://linkly.vercel.app`
 - `https://example.com`
 - `http://10.1.2.3:3000`
 
@@ -253,7 +253,7 @@ AUTH_URL=https://your-domain.com
 
 - GitHub OAuth App 中的 `Authorization callback URL`
 - 环境变量 `AUTH_URL`
-- 用户实际访问 BMM 的地址
+- 用户实际访问 Linkly 的地址
 
 问题示例截图：
 

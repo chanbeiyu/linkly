@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pm2_process_name="bmm"
+pm2_process_name="linkly"
 # 获取当前脚本所在目录
 workdir=$(cd $(dirname $0); pwd)
 

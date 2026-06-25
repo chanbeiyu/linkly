@@ -1,9 +1,9 @@
 ---
-name: bmm-iconify-icons
-description: Guide for updating Iconify icons and IconNames conventions in BMM. Use when Codex needs to add or rename static icon classes, refactor IconNames, replace hardcoded icon-[...] Tailwind classes, adjust Iconify-powered UI components, or keep icon usage consistent with this repository's Tailwind and React patterns.
+name: linkly-iconify-icons
+description: Guide for updating Iconify icons and IconNames conventions in Linkly. Use when Codex needs to add or rename static icon classes, refactor IconNames, replace hardcoded icon-[...] Tailwind classes, adjust Iconify-powered UI components, or keep icon usage consistent with this repository's Tailwind and React patterns.
 ---
 
-# BMM Iconify Icons
+# Linkly Iconify Icons
 
 Apply Iconify changes in this repository by separating static CSS icons from dynamic icon data, then update the shared `IconNames` registry before touching individual components.
 
@@ -62,6 +62,6 @@ Apply Iconify changes in this repository by separating static CSS icons from dyn
 
 ## Example Requests
 
-- "Use $bmm-iconify-icons to add a new Tabler icon to the bookmark page."
-- "Use $bmm-iconify-icons to replace hardcoded icon-[...] classes with IconNames."
-- "Use $bmm-iconify-icons to refactor IconNames into icon-set groups."
+- "Use $linkly-iconify-icons to add a new Tabler icon to the bookmark page."
+- "Use $linkly-iconify-icons to replace hardcoded icon-[...] classes with IconNames."
+- "Use $linkly-iconify-icons to refactor IconNames into icon-set groups."
