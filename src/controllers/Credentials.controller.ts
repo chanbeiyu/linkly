@@ -29,6 +29,9 @@ function verifyPassword(password: string, hash: string, salt: string) {
 const CredentialsController = {
   // 注册时，创建账户
   async create(payload: z.infer<typeof zodSchemas.userCredential>) {
+    // |===> 检查是否禁止新用户注册
+    if (process.env.NEXT_REGISTER_DISABLED) throw new Error('禁止新用户注册')
+
     const { email, password } = zodSchemas.userCredential.parse(payload)
     const count = await db.$count(schema.users, eq(schema.users.email, email))
     if (count > 0) throw new Error('邮箱已被注册使用')
