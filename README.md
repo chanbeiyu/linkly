@@ -1,6 +1,7 @@
 <div align="center">
   <img width="108" src="./doc/images/logo.svg" alt="Linkly Logo">
   <h1>Linkly</h1>
+  <h3><a href="https://github.com/Y80/bmm" target="_blank">Fork From BMM</a></h3>
   <p>收纳、整理、搜索与分享网站书签的开源全栈应用。</p>
   <p>面向个人与团队的书签管理器，支持公开展示、用户空间、后台维护，以及 AI 辅助整理流程。</p>
   <p>

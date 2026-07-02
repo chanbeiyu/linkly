@@ -1,3 +1,8 @@
+---
+name: linkly-agent-docs
+description: Guide for modifying Linkly docs create/edit 
+---
+
 # Linkly Agent Docs
 
 本 skill 说明 Linkly 项目的智能体文档架构，确保所有 AI 智能体（Claude Code、Codex 等）共享同一份项目指南。
